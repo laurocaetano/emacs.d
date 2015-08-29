@@ -62,6 +62,8 @@
 (require 'init-flycheck)
 
 (require 'init-recentf)
+(require 'init-neotree)
+(require 'init-helm)
 (require 'init-ido)
 (require 'init-hippie-expand)
 (require 'init-auto-complete)
@@ -81,6 +83,7 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-erlang)
+(require 'init-elixir)
 (require 'init-javascript)
 (require 'init-html)
 (require 'init-css)
