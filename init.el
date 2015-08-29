@@ -76,28 +76,18 @@
 
 (require 'init-vc)
 (require 'init-darcs)
-(require 'init-git)
-(require 'init-github)
 
 (require 'init-compile)
-(require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
-(require 'init-csv)
 (require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
-(require 'init-org)
-(require 'init-nxml)
 (require 'init-html)
 (require 'init-css)
-(require 'init-haml)
-(require 'init-python-mode)
 (require 'init-haskell)
 (require 'init-elm)
 (require 'init-ruby-mode)
 (require 'init-rails)
-(require 'init-sql)
 
 (require 'init-paredit)
 (require 'init-lisp)
@@ -117,8 +107,6 @@
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
-(require-package 'lua-mode)
-(require-package 'htmlize)
 (require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
@@ -131,13 +119,11 @@
 (unless (server-running-p)
   (server-start))
 
-
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
 (when (file-exists-p custom-file)
   (load custom-file))
-
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
@@ -145,7 +131,6 @@
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/lisp"))
 (require 'init-local nil t)
-
 
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
@@ -156,7 +141,6 @@
           (lambda ()
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
-
 
 (provide 'init)
 
