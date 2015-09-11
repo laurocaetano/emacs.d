@@ -1,6 +1,7 @@
 (when (< emacs-major-version 24)
   (require-package 'color-theme))
 
+(setq-default cursor-type 'bar)
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
 
@@ -45,7 +46,7 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(sanityinc-tomorrow-night))
+(setq-default custom-enabled-themes '(tsdh-light))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
